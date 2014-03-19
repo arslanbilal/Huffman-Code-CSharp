@@ -22,9 +22,7 @@ namespace HuffmanCodeWithCSharp
             symbol = value;     // Setting the symbol.
             frequency = 1;      // This is creation of Node, so now its count is 1.
             
-            leftTree = null;
-            rightTree = null;       // Does not have a left or right tree and a parent.
-            parentNode = null;
+            rightTree = leftTree = parentNode = null;       // Does not have a left or right tree and a parent.
 
             code = "";          // It will be Assigned on the making Tree. Now it is empty.
             isLeaf = true;      // Because all Node we create first does not have a parent Node.
