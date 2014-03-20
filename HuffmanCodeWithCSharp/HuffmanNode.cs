@@ -39,35 +39,19 @@ namespace HuffmanCodeWithCSharp
             isLeaf = false;
             parentNode = null;
 
-            // Now the new Node need leaf. They are node1 and node2. if node1's frequency is bigger than node2's frequency. It is right tree. Otherwise left tree. The controllers are below:
-            if (node1.frequency > node2.frequency)
+            // Now the new Node need leaf. They are node1 and node2. if node1's frequency is bigger than or equal to node2's frequency. It is right tree. Otherwise left tree. The controllers are below:
+            if (node1.frequency >= node2.frequency)
             {
                 rightTree = node1;
                 leftTree = node2;
-                rightTree.parentNode = leftTree.parentNode = this;     // this means the new Node!
+                rightTree.parentNode = leftTree.parentNode = this;     // "this" means the new Node!
             }
             else if (node1.frequency < node2.frequency)
             {
                 rightTree = node2;
                 leftTree = node1;
-                leftTree.parentNode = rightTree.parentNode = this;     // this means the new Node!
+                leftTree.parentNode = rightTree.parentNode = this;     // "this" means the new Node!
             }
-            else                                                // Otherwise check the frequency.
-            {
-                if (node1.symbol.CompareTo(node2.symbol) == 1)
-                {
-                    rightTree = node1;
-                    leftTree = node2;
-                    rightTree.parentNode = leftTree.parentNode = this;
-                }
-                else
-                {
-                    rightTree = node2;
-                    leftTree = node1;
-                    leftTree.parentNode = rightTree.parentNode = this;
-                }
-            }
-            
         }
 
 
