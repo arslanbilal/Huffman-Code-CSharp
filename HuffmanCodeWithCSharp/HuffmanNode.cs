@@ -44,13 +44,13 @@ namespace HuffmanCodeWithCSharp
             {
                 rightTree = node1;
                 leftTree = node2;
-                node1.parentNode = node2.parentNode = this;     // this means the new Node!
+                rightTree.parentNode = leftTree.parentNode = this;     // this means the new Node!
             }
             else if (node1.frequency < node2.frequency)
             {
                 rightTree = node2;
                 leftTree = node1;
-                node1.parentNode = node2.parentNode = this;     // this means the new Node!
+                leftTree.parentNode = rightTree.parentNode = this;     // this means the new Node!
             }
             else                                                // Otherwise check the frequency.
             {
@@ -58,13 +58,13 @@ namespace HuffmanCodeWithCSharp
                 {
                     rightTree = node1;
                     leftTree = node2;
-                    node1.parentNode = node2.parentNode = this;
+                    rightTree.parentNode = leftTree.parentNode = this;
                 }
                 else
                 {
                     rightTree = node2;
                     leftTree = node1;
-                    node1.parentNode = node2.parentNode = this;
+                    leftTree.parentNode = rightTree.parentNode = this;
                 }
             }
             
