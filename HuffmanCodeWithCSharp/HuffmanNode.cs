@@ -46,7 +46,7 @@ namespace HuffmanCodeWithCSharp
                 leftTree = node2;
                 rightTree.parentNode = leftTree.parentNode = this;     // "this" means the new Node!
             }
-            else if (node1.frequency < node2.frequency)
+            else
             {
                 rightTree = node2;
                 leftTree = node1;
