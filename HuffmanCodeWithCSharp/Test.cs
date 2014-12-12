@@ -9,7 +9,6 @@ namespace HuffmanCodeWithCSharp
     class Test
     {
         // Test class provide us to test our program.
-
         static void Main(string[] args)
         {
             Console.Title = "Huffman Code with File, by bilalarslan"; // Setting the Console name.
@@ -70,7 +69,6 @@ namespace HuffmanCodeWithCSharp
 
 
         // These are methods that to change the color of the console secren. These are public because they must be accessible from ProcessMethods class. Instant method.
-
         public static void setColor()
         {
             Console.ForegroundColor = ConsoleColor.Cyan;

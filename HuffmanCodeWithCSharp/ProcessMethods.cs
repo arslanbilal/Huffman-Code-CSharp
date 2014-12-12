@@ -19,7 +19,6 @@ namespace HuffmanCodeWithCSharp
             Console.WriteLine("Example file: \"a.txt\"\n");
             Test.setColorDefault();           
             Console.Write("Enter the path of the file: ");
-            Test.setColorDefault();
             String filename = Console.ReadLine();
             try
             {
