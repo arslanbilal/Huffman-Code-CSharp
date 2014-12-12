@@ -18,7 +18,7 @@ namespace HuffmanCodeWithCSharp
             Console.WriteLine ("Enter the path of the file");
             Console.Write("For Example: ");
             Test.setColor();
-            Console.Write("(a.txt , pau.txt, binary.txt): ");
+            Console.Write("a.txt , pau.txt, binary.txt): ");
             Test.setColorDefault();
             String filename = Console.ReadLine();
             try
