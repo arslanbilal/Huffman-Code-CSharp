@@ -15,10 +15,10 @@ namespace HuffmanCodeWithCSharp
         {
             List<HuffmanNode> nodeList = new List<HuffmanNode>();  // Node List.
 
-            Console.WriteLine ("Enter the path of the file");
-            Console.Write("For Example: ");
             Test.setColor();
-            Console.Write("a.txt , pau.txt, binary.txt): ");
+            Console.WriteLine("Example file: \"a.txt\"\n");
+            Test.setColorDefault();           
+            Console.Write("Enter the path of the file: ");
             Test.setColorDefault();
             String filename = Console.ReadLine();
             try
