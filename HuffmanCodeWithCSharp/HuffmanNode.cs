@@ -32,9 +32,6 @@ namespace HuffmanCodeWithCSharp
         public HuffmanNode(HuffmanNode node1, HuffmanNode node2) // Join the 2 Node to make Node.
         {
             // Firsly we are adding this 2 Nodes' variables. Except the new Node's left and right tree.
-
-            symbol = node1.symbol + node2.symbol;
-            frequency = node1.frequency + node2.frequency;
             code = "";
             isLeaf = false;
             parentNode = null;
@@ -45,12 +42,16 @@ namespace HuffmanCodeWithCSharp
                 rightTree = node1;
                 leftTree = node2;
                 rightTree.parentNode = leftTree.parentNode = this;     // "this" means the new Node!
+                symbol = node1.symbol + node2.symbol;
+                frequency = node1.frequency + node2.frequency;
             }
             else if (node1.frequency < node2.frequency)
             {
                 rightTree = node2;
                 leftTree = node1;
                 leftTree.parentNode = rightTree.parentNode = this;     // "this" means the new Node!
+                symbol = node2.symbol + node1.symbol;
+                frequency = node2.frequency + node1.frequency;
             }
         }
 
